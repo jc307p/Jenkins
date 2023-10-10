@@ -8,8 +8,7 @@ def call(Map config=[:]) {
   ]
   def render = renderTemplate(rawBody,binding)
   echo "${render}"
-  bat('curl -D- -u $JIRA_CREDENTIALS -X POST --data "{
-    \"fields\": {
+  bat('curl -D- -u $JIRA_CREDENTIALS -X POST --data "{\"fields\": {
        \"project\":
        {
           \"key\": \"DAIOT\"
