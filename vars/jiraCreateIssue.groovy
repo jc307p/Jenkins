@@ -6,5 +6,5 @@ def call(Map config=[:]) {
     description: "${config.description}",
     issueTypeName: "${config.issueTypeName}"
   ]
-  echo "End of jiraCreateIssue script"
+  echo "${config.key}"
 }
