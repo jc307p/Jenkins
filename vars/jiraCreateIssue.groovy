@@ -6,5 +6,5 @@ def call(Map config=[:]) {
     description: "${config.description}",
     issueTypeName: "${config.issueTypeName}"
   ]
-  echo $key
+  echo ${key}
 }
