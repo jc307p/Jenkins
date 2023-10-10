@@ -6,8 +6,6 @@ def call(Map config=[:]) {
     description: "${config.description}",
     issueTypeName: "${config.issueTypeName}"
   ]
-  echo "${config.key}"
   def render = renderTemplate(rawBody,binding)
-  echo "${render}"
-
+  curl -D- -u $JIRA_CREDENTIALS -X POST --data "'+render+'" -H "Content-Type: application/json" $JIRA_URL/rest/api/2/issue
 }
