@@ -6,6 +6,4 @@ def call(Map config=[:]) {
     description: "${config.description}",
     issueTypeName: "${config.issueTypeName}"
   ]
-  rem def render = renderTemplate(rawBody,binding)
-  rem echo $render
 }
