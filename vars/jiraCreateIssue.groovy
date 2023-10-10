@@ -7,4 +7,6 @@ def call(Map config=[:]) {
     issueTypeName: "${config.issueTypeName}"
   ]
   echo "${config.key}"
+  def render = renderTemplate(rawBody,binding)
+
 }
