@@ -7,7 +7,6 @@ def call(Map config=[:]) {
     issueTypeName: "${config.issueTypeName}"
   ]
   def render = renderTemplate(rawBody,binding)
-  echo %JIRA_URL%
   echo "${JIRA_URL}"
  
 }
