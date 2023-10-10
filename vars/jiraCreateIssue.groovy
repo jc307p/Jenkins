@@ -7,6 +7,6 @@ def call(Map config=[:]) {
     issueTypeName: "${config.issueTypeName}"
   ]
   def render = renderTemplate(rawBody,binding)
-    curl -u TEST_Jenkins:test1234 https://darp-jira-sbx.test.att.com//rest/api/2/issue
+    curl -u TEST_Jenkins:test1234 https://darp-jira-sbx.test.att.com/rest/api/2/issue
 
 }
