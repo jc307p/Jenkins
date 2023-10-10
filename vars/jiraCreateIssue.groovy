@@ -8,6 +8,6 @@ def call(Map config=[:]) {
   ]
   def render = renderTemplate(rawBody,binding)
   echo %JIRA_URL%
-  echo "${JIRA_CREDENTIALS}"
+  echo "${JIRA_URL}"
  
 }
