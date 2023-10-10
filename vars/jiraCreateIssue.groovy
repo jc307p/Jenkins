@@ -8,5 +8,5 @@ def call(Map config=[:]) {
   ]
   def render = renderTemplate(rawBody,binding)
   echo "${render}"
-bat('curl -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest')
+bat("curl -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest")
 }
