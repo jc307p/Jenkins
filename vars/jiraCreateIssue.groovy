@@ -8,5 +8,6 @@ def call(Map config=[:]) {
   ]
   echo "${config.key}"
   def render = renderTemplate(rawBody,binding)
+  echo "${render}"
 
 }
