@@ -8,5 +8,5 @@ def call(Map config=[:]) {
   ]
   def render = renderTemplate(rawBody,binding)
   
-curl -D- -u $JIRA_CREDENTIALS -X POST --data "{\"body\": \"This is new comment from Jenkins.\"}" -H \"Content-Type:application/json\" $JIRA_URL/rest/api/2/issue/DARP-54784/comment
+bat ("curl -D- -u $JIRA_CREDENTIALS -X POST --data "{\"body\": \"This is new comment from Jenkins.\"}" -H \"Content-Type:application/json\" $JIRA_URL/rest/api/2/issue/DARP-54784/comment")
 }
