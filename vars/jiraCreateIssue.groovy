@@ -9,7 +9,4 @@ def call(Map config=[:]) {
   def render = renderTemplate(rawBody,binding)
   
   echo "Render value is : ${render}"
-  set data={\"fields\":{\"project\":{\"key\":\"DARP\"}, \"summary\":\"From Jenkins\", \"issuetype\":{\"name\":\"DA Defect\"}}}
-  echo "%data%"
-
 }
