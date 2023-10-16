@@ -8,7 +8,8 @@ def call(Map config=[:]) {
   ]
   def render = renderTemplate(rawBody,binding)
   
-bat """
+  echo "Render value is : ${render}"
+  bat """
   curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/2/issue/DARP-54784/comment -X POST --data \"{\\"body\\": \\"This is new comment from Jenkins.\\"}\" -H \"Content-Type:application/json\"
   """
 }
