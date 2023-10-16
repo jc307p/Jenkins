@@ -12,6 +12,6 @@ def call(Map config=[:]) {
   set "data={\"fields\":{\"project\":{\"key\":\"DARP\"}, \"summary\":\"From Jenkins\", \"issuetype\":{\"name\":\"DA Defect\"}}}"
   echo %data%
   bat """
-  curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/2/issue/ -X POST --data """{"fields":{"project":{"key":"DARP"}, "summary":"From Jenkins", "issuetype":{"name":"DA Defect"}}}"""-H "Content-Type:application/json"
+  curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/2/issue/ -X POST --data """%data%"""-H "Content-Type:application/json"
   """
 }
