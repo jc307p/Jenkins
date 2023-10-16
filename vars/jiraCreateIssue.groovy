@@ -10,6 +10,6 @@ def call(Map config=[:]) {
   
   echo "Render value is : ${render}"
   bat """
-  curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/2/issue/ -X POST --data """{\"fields\": {\"project\": {\"key\": \"DARP\"},\"summary\": \"Issue Created from Jenkins\"}, \"issuetype\": {\"name\":\"DA Defect\"}}""" -H \"Content-Type:application/json\"
+  curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/2/issue/ -X POST --data """{"fields": {"project": {"key": "DARP"},"summary": "Issue Created from Jenkins"}, "issuetype": {"name":"DA Defect"}}""" -H \"Content-Type:application/json\"
   """
 }
