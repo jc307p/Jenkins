@@ -10,6 +10,6 @@ def call(Map config=[:]) {
   
   echo "Render value is : ${render}"
   set "data={\"fields\":{\"project\":{\"key\":\"DARP\"}, \"summary\":\"From Jenkins\", \"issuetype\":{\"name\":\"DA Defect\"}}}"
-  echo %data%
+  echo "%data%"
 
 }
