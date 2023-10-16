@@ -10,6 +10,6 @@ def call(Map config=[:]) {
   
   echo "Render value is : ${render}"
   bat """
-    curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest/issue/DARP-54784/comment -X POST --data \\"${render}\\" -H \"Content-Type:application/json\"
+    curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest/issue/DARP-54784/comment -X POST --data \"$render\" -H \"Content-Type:application/json\"
   """
 }
