@@ -9,7 +9,7 @@ def call(Map config=[:]) {
   def render = renderTemplate(rawBody,binding)
   echo "${render}"
   bat """
-    curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest/issue/ -H "Content-Type:application/json" -X POST --data $render 
+    curl -D- -u $JIRA_CREDENTIALS $JIRA_URL/rest/api/latest/issue/ -H "Content-Type:application/json" -X POST --data \"$render\" 
   """
   
 }
