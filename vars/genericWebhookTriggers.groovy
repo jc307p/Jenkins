@@ -11,6 +11,7 @@ def getConfig(String configFile) {
 }
 
 def call(String configFile){
+  echo "configFile is ${configFile}"
   def triggersConfig = getConfig(configFile)
 
   triggersConfig.each {trigger ->
