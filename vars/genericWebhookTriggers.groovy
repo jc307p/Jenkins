@@ -1,6 +1,7 @@
 def getConfig(String configFile) {
   def workspace = new File('.').toURI()
   def config = new File(workspace.resolve(configFile).toURL().toURI())
+  echo "config is ${config}"
   if (config.exists()) {
     config.withReader { reader ->
       new GroovyShell().evaluate(reader)
