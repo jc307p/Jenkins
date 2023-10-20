@@ -19,11 +19,16 @@ def call(String configFile){
   echo "configFile is ${configFile}"
   def basePath = 'com/planetpope/config/'
   def fullPath = basePath + configFile
-  def config = libraryResource fullPath
+  def configContent = libraryResource fullPath
   echo "config is ${config}"
   def configClass = config.getClass()
   echo "config class is ${configClass}"
-  def triggersConfig = config.toFile()
+
+  Properties config = new Properties()
+  config.load(new StrinReader(configContent))
+
+  String causeString = config.getProperty("causeString")
+  echo "causeString is ${causeString}"
 
   triggersConfig.each {trigger ->
     properties([
