@@ -24,11 +24,11 @@ def call(String configFile){
 //  def configClass = config.getClass()
 //  echo "config class is ${configClass}"
 
-//  Properties config = new Properties()
-//  config.load(new StringReader(configContent))
+  Properties config = new Properties()
+  config.load(new StringReader(configContent))
 
-//  String causeString = config.getProperty("causeString")
-//  echo "causeString is ${causeString}"
+  String causeString = config.getProperty("causeString")
+  echo "causeString is ${causeString}"
 
 //  triggersConfig.each {trigger ->
 //    properties([
