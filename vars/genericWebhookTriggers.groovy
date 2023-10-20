@@ -29,9 +29,9 @@ def call(String configFile){
 //          silentResponse: trigger.silentResponse,
 //          regexpFilterText: trigger.regexpFilterText,  
 //          regexpFilterExpression: trigger.regexpFilterExpression 
-//        ]
-//      ])
-//    ])
+        ]
+      ])
+    ])
 //  }
 }
   
