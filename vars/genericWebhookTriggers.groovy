@@ -16,7 +16,7 @@ def getConfig(String configFile) {
 
 def call(String configFile){
   echo "configFile is ${configFile}"
-  def BasePath = 'com/planetpope/config/'
+  def basePath = 'com/planetpope/config/'
   def fullPath = basePath + configFile
   def config = libraryResource fullPath
   echo "config is ${config}"
