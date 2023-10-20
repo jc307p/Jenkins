@@ -30,7 +30,7 @@ def call(String configFile){
       pipelineTriggers([
         [
           $class:'GenericTrigger',
-          genericVariables: "${genericVariables}",
+//          genericVariables: "${genericVariables}",
           token: "${token}",
           causeString: "${causeString}",
 //          printContributedVariables: trigger.printContributedVariables,
