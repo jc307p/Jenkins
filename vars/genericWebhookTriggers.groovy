@@ -13,7 +13,14 @@ def call(String configFile){
   Properties config = new Properties()
   config.load(new StringReader(configContent))
 
+  String token = config.getProperty("token")
   String causeString = config.getProperty("causeString")
+  String printContributedVariables = config.getProperty("printContributedVariables")
+  String printPostContent = config.getProperty("printPostContent")
+  String silentResponse = config.getProperty("silentResponse")
+  String regexpFilterText = config.getProperty("regexpFilterText")
+  String regexpFilterExpression = config.getProperty("regexpFilterExpression")
+  
 //  echo "causeString is ${causeString}"
 
 //  triggersConfig.each {trigger ->
@@ -28,7 +35,7 @@ def call(String configFile){
 //          printPostContent: trigger.printPostContent,
 //          silentResponse: trigger.silentResponse,
 //          regexpFilterText: trigger.regexpFilterText,  
-//          regexpFilterExpression: trigger.regexpFilterExpression 
+          regexpFilterExpression: "${regexpFilterExpression}"
         ]
       ])
     ])
