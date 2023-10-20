@@ -24,28 +24,28 @@ def call(String configFile){
   def configClass = config.getClass()
   echo "config class is ${configClass}"
 
-  Properties config = new Properties()
-  config.load(new StringReader(configContent))
+//  Properties config = new Properties()
+//  config.load(new StringReader(configContent))
 
-  String causeString = config.getProperty("causeString")
-  echo "causeString is ${causeString}"
+//  String causeString = config.getProperty("causeString")
+//  echo "causeString is ${causeString}"
 
-  triggersConfig.each {trigger ->
-    properties([
-      pipelineTriggers([
-        [
-          $class:'GenericTrigger',
-          genericVariables: trigger.genericVariables,
-          token: trigger.token,
-          causeString: trigger.causeString,
-          printContributedVariables: trigger.printContributedVariables,
-          printPostContent: trigger.printPostContent,
-          silentResponse: trigger.silentResponse,
-          regexpFilterText: trigger.regexpFilterText,  
-          regexpFilterExpression: trigger.regexpFilterExpression 
-        ]
-      ])
-    ])
+//  triggersConfig.each {trigger ->
+//    properties([
+//      pipelineTriggers([
+//        [
+//          $class:'GenericTrigger',
+//          genericVariables: trigger.genericVariables,
+//          token: trigger.token,
+//          causeString: trigger.causeString,
+//          printContributedVariables: trigger.printContributedVariables,
+//          printPostContent: trigger.printPostContent,
+//          silentResponse: trigger.silentResponse,
+//          regexpFilterText: trigger.regexpFilterText,  
+//          regexpFilterExpression: trigger.regexpFilterExpression 
+//        ]
+//      ])
+//    ])
   }
 }
   
