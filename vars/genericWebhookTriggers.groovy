@@ -1,7 +1,10 @@
+import java.nio.file.Paths
+
 def getConfig(String configFile) {
-  def workspace = new File('.').toURI()
-  def config = new File(workspace.resolve(configFile).toURL().toURI())
+  def configPath = Paths.get(".", "com", "planetpope", "config", configFile)
+  def config = configPath.toFile()
   echo "config is ${config}"
+  
   if (config.exists()) {
     config.withReader { reader ->
       new GroovyShell().evaluate(reader)
