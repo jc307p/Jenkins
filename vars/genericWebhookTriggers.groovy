@@ -20,9 +20,9 @@ def call(String configFile){
   def basePath = 'com/planetpope/config/'
   def fullPath = basePath + configFile
   def configContent = libraryResource fullPath
-  echo "config is ${config}"
-  def configClass = config.getClass()
-  echo "config class is ${configClass}"
+  echo "configContent is ${configContent}"
+//  def configClass = config.getClass()
+//  echo "config class is ${configClass}"
 
 //  Properties config = new Properties()
 //  config.load(new StringReader(configContent))
