@@ -13,6 +13,8 @@ def call(String configFile){
   Properties config = new Properties()
   config.load(new StringReader(configContent))
 
+  String genericVariables = config.getProperty("genericVariables")
+  echo "genericVaribles is ${genericVariables}"
   String token = config.getProperty("token")
   String causeString = config.getProperty("causeString")
   String printContributedVariables = config.getProperty("printContributedVariables")
@@ -28,8 +30,8 @@ def call(String configFile){
       pipelineTriggers([
         [
           $class:'GenericTrigger',
-//          genericVariables: trigger.genericVariables,
-//          token: trigger.token,
+          genericVariables: "${genericVariables}",
+          token: "${token}",
           causeString: "${causeString}",
 //          printContributedVariables: trigger.printContributedVariables,
 //          printPostContent: trigger.printPostContent,
