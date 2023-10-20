@@ -1,5 +1,5 @@
 genericVariables=[[key:'jsonString', value:'$.issue.fields.description']]
-token="your-token"
+token=your-token
 causeString="triggered from Jira Cloud"
 printContributedVariables: false
 printPostContent: false
