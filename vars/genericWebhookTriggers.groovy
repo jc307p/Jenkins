@@ -25,7 +25,7 @@ def call(String configFile){
   echo "config class is ${configClass}"
 
   Properties config = new Properties()
-  config.load(new StrinReader(configContent))
+  config.load(new StringReader(configContent))
 
   String causeString = config.getProperty("causeString")
   echo "causeString is ${causeString}"
