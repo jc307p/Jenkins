@@ -18,7 +18,7 @@ def call(String configFile){
   echo "configFile is ${configFile}"
   def config = libraryResource 'com/planetpope/config/config_Jira_Cloud.txt'
   echo "config is ${config}"
-  def triggersConfig = getConfig(configFile)
+  def triggersConfig = config.toFile()
 
   triggersConfig.each {trigger ->
     properties([
