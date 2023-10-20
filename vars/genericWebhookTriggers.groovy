@@ -16,7 +16,9 @@ def getConfig(String configFile) {
 
 def call(String configFile){
   echo "configFile is ${configFile}"
-  def config = libraryResource 'com/planetpope/config/config_Jira_Cloud.txt'
+  def BasePath = 'com/planetpope/config/'
+  def fullPath = basePath + configFile
+  def config = libraryResource fullPath
   echo "config is ${config}"
   def configClass = config.getClass()
   echo "config class is ${configClass}"
