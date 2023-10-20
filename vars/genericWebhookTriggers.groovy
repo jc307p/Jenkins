@@ -1,4 +1,5 @@
 import java.nio.file.Paths
+import java.util.Properties
 
 def getConfig(String configFile) {
   def configPath = Paths.get(".", "com", "planetpope", "config", configFile)
